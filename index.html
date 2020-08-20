@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/style.css">
     <title>Library</title>
 </head>
 <body>
@@ -11,13 +13,36 @@
         <div id="lib">
             <div class="heading">
                 <h1>Library</h1>
+                <button class="addbook icon-plus" value="add">  Add Book</button>
             </div>
+            <div id="popup-form" class="container">
+                <form id="book-form"> 
+                    <h3>Enter Book Details</h3>
+                    <fieldset>
+                      <input id="title" class="form-control" type="text" for="title" placeholder="Book's title" autofocus="autofocus" required="">
+                     </fieldset> 
+                    <fieldset>
+                      <input id="author" class="form-control" type="text" for="author" placeholder="Author's name" required="">
+                     </fieldset>
+                    <fieldset>
+                      <input id="number" class="form-control" type="number" min="10" max="9999" placeholder="Pages.....">
+                     </fieldset> 
+                    <fieldset><label>Check this box if you've read it: <input class="input-checkbox" name="readStatus" type="checkbox" value="read/notread"> </label></fieldset>
+                  <fieldset>
+                    <button name="submit" type="submit" id="submit">Submit</button>    
+                  </fieldset> 
+                </form>
+            </div>  
             <div class="library-headings">
                 <div class="Btitle">Title</div>
                 <div class="Bauthor">Author</div>
                 <div class="Bpages">Pages</div>
                 <div class="Bstatus">Status</div>
-            </div>     
+                <div class="icon-trash icon-large"></div>
+            </div> 
+            <div class="library-container">
+            </div>
+             
         </div> 
     </div>
     <script type="text/javascript" src="script/library.js"></script>
